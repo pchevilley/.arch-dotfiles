@@ -165,14 +165,14 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/pipewire": {
-	"exec": "pw-volume status",
-	"return-type": "json",
-	"interval": "once",
-	"signal": 8,
-	"format": "{icon} {percentage}",
-	"format-icons": {
-	    "mute": "",
-	    "default": ["󰕿", "󰖀", "󰕾"]
-	}
+        "exec": "pw-volume status",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "format": "{icon} {percentage}",
+        "format-icons": {
+            "mute": "",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        }
     }
 }
