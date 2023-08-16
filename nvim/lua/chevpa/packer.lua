@@ -46,4 +46,9 @@ return require('packer').startup(function(use)
     })
 
     use 'f-person/git-blame.nvim'
+    use 'mtth/scratch.vim'
+
+    use('neovim/nvim-lspconfig')
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
 end)
