@@ -16,4 +16,7 @@ prettier.setup({
     "typescriptreact",
     "yaml",
   },
+  cli_options = {
+      config_precedence = "cli-override",
+  }
 })
