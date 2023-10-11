@@ -7,5 +7,7 @@
 !nvim
 !wofi
 !tmux
-!eww
 !lazygit
+
+tmux/plugins
+lazygit/state.yml
