@@ -14,3 +14,9 @@ vim.opt.undofile = true
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+
+vim.filetype.add({
+     extension = {
+         mdx = 'markdown'
+     }
+});
