@@ -15,4 +15,4 @@ vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>")
 
 vim.keymap.set("n", "<leader>n", ":Scratch<CR>")
 
-vim.keymap.set("n", "<leader>fj", ":%!jq<CR>")
+vim.keymap.set("n", "<leader>J", ":%!jq<CR>")
