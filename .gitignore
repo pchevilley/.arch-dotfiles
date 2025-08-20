@@ -8,6 +8,7 @@
 !wofi
 !tmux
 !lazygit
+!ranger
 
 tmux/plugins
 lazygit/state.yml
