@@ -40,7 +40,7 @@ return {
 
             -- Example keymap to toggle Neo-tree popup
             vim.keymap.set("n", "<leader>x", ":Neotree toggle<CR>", { desc = "Neo-tree popup" })
-            vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Neo-tree popup" })
+            vim.keymap.set("n", "<leader>e", ":Neotree reveal toggle<CR>", { desc = "Neo-tree popup" })
         end,
     }
 }
