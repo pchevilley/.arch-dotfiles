@@ -10,11 +10,6 @@ return {
         lazy = false,
         config = function()
             require("neo-tree").setup({
-                filtered_items = {
-                    visible = true,        -- show hidden files
-                    hide_dotfiles = false, -- don’t hide dotfiles
-                    hide_gitignored = false, -- optional: show gitignored files
-                },
                 filesystem = {
                     follow_current_file = {
                         enabled = true,      -- was previously just `true`
@@ -22,6 +17,11 @@ return {
                     },
                     hijack_netrw_behavior = "disabled",
                     use_libuv_file_watcher = true,
+                    filtered_items = {
+                        visible = true,        -- show hidden files
+                        hide_dotfiles = false, -- don’t hide dotfiles
+                        hide_gitignored = false, -- optional: show gitignored files
+                    },
                 },
                 window = {
                     --position = "float",  -- popup mode

@@ -18,3 +18,10 @@ vim.api.nvim_set_keymap('n', '<leader>gh', ':lua toggle_signcolumn()<CR>', { nor
 require("lazy").setup({
   {"nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate"}
 })
+require("conform").setup({
+  format_on_save = {
+    -- These options will be passed to conform.format()
+    timeout_ms = 500,
+    lsp_format = "fallback",
+  },
+})
