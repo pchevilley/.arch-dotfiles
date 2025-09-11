@@ -34,6 +34,16 @@ return {
                         ["<C-c>"] = "close_window",
                         ["D"] = "add_directory",
                         ["-"] = "navigate_up",
+                        ["z"] = "noop"
+                    },
+                },
+                event_handlers = {
+                    {
+                        event = "neo_tree_buffer_enter",
+                        handler = function()
+                            -- Simulate pressing `zz` in this buffer
+                            vim.cmd("normal! zz")
+                        end,
                     },
                 },
             })
@@ -41,6 +51,18 @@ return {
             -- Example keymap to toggle Neo-tree popup
             vim.keymap.set("n", "<leader>x", ":Neotree toggle<CR>", { desc = "Neo-tree popup" })
             vim.keymap.set("n", "<leader>e", ":Neotree reveal toggle<CR>", { desc = "Neo-tree popup" })
+
+            vim.api.nvim_create_autocmd("FileType", {
+  pattern = "neo-tree",
+  callback = function(event)
+    local opts = { buffer = event.buf, silent = true }
+
+    -- Keep native z-motions working in Neo-tree
+    vim.keymap.set("n", "zz", "zz", opts) -- center
+    vim.keymap.set("n", "zt", "zt", opts) -- top
+    vim.keymap.set("n", "zb", "zb", opts) -- bottom
+  end,
+})
         end,
     }
 }
